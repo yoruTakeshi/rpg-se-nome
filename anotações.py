@@ -4,7 +4,7 @@ SM = 0
 
 # personagem
 
-bufunfa: 0
+bufunfa = 0
 
 ## status:
 
@@ -40,9 +40,10 @@ DAL = VE + SA
 ### dano de magia (SA = status da arma; SM statos da magia)
 DAM = IN + SA + SM
 
-# Inimigos básicos:
+# inimigos básicos:
 
 ## Lobo(Totorial)
+
 if main.inimigo1 == "lobo totorial":
   HP1 = 10
   DA1 = 2
@@ -56,5 +57,37 @@ if main.inimigo3 == "lobo totorial":
   DA3 = 2
   VE3 = -1
 
-#Iniciativa
-if VE > 
+#iniciativa
+
+INI = []
+
+# VE1 = 1 VE2 = 2 VE3 = 3
+
+if VE2 > VE1 and VE2 < VE3:
+  INI.append(3)
+  INI.append(2)
+  INI.append(1)
+elif VE1 > VE3 and VE1 < VE2:
+  INI.append(3)
+  INI.append(1)
+  INI.append(2)
+elif VE3 > VE1 and VE3 < VE2:
+  INI.append(1)
+  INI.append(3)
+  INI.append(2)
+elif VE2 > VE3 and VE2 < VE1:
+  INI.append(1)
+  INI.append(2)
+  INI.append(3)
+elif VE1 > VE3 and VE1 < VE2:
+  INI.append(2)
+  INI.append(1)
+  INI.append(3)
+else:
+  INI.append(2)
+  INI.append(3)
+  INI.append(1)
+for i in range(3):
+  if VE > INI[i]:
+    INI.insert(i, 0)
+    break
