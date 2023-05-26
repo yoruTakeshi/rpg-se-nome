@@ -1,1 +1,0 @@
-linebreak = print('\033c', end='')
