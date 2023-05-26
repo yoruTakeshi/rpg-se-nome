@@ -28,8 +28,8 @@ save_system = SaveSystem()
 # Salvar o jogo
 player_data = {
     'LV': LV,
-    'PV': 100,
-    'GOLD': 50
+    'PV': HP,
+    'GOLD': bufunfa
 }
 save_system.save_game(player_data)
 

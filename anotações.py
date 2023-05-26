@@ -4,6 +4,8 @@ SM = 0
 
 # personagem
 
+bufunfa: 0
+
 ## status:
 
 ### level
@@ -48,14 +50,11 @@ if main.inimigo1 == "lobo totorial":
 if main.inimigo2 == "lobo totorial":
   HP2 = 10
   DA2 = 2
-  VE2
+  VE2 = -1
 if main.inimigo3 == "lobo totorial":
   HP3 = 10
   DA3 = 2
   VE3 = -1
 
-#não sei oque escrever
-JI = VE
-N1I = VE1
-N2I 
-N3I
+#Iniciativa
+if VE > 
