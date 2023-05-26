@@ -20,3 +20,8 @@
 
 # "faz o L"
 ## lil vinicin, 2022
+
+# Mecânicas Principais:
+1. Combate: Básico
+2. Mapa
+3. Save

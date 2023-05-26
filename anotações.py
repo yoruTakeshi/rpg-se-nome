@@ -4,7 +4,7 @@ SM = 0
 
 # personagem
 
-## status
+## status:
 
 ### level
 LV = 1
@@ -24,7 +24,7 @@ IN = 0
 ### vida
 HP = LV * CO + 20
 
-### mana points
+### mana
 MP = LV * IN + 10
 
 ## danos
@@ -40,13 +40,22 @@ DAM = IN + SA + SM
 
 # Inimigos básicos:
 
-## Lobo(Normal)
-if main.inimigo1 == "lobo":
+## Lobo(Totorial)
+if main.inimigo1 == "lobo totorial":
   HP1 = 10
   DA1 = 2
-if main.inimigo2 == "lobo":
+  VE1 = -1
+if main.inimigo2 == "lobo totorial":
   HP2 = 10
   DA2 = 2
-if inimigo3 == "lobo":
+  VE2
+if main.inimigo3 == "lobo totorial":
   HP3 = 10
   DA3 = 2
+  VE3 = -1
+
+#não sei oque escrever
+JI = VE
+N1I = VE1
+N2I 
+N3I
