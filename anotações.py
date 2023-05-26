@@ -4,8 +4,6 @@ SM = 0
 
 # personagem
 
-bufunfa = 0
-
 ## status:
 
 ### level
@@ -87,7 +85,8 @@ else:
   INI.append(2)
   INI.append(3)
   INI.append(1)
-for i in range(3):
-  if VE > INI[i]:
-    INI.insert(i, 0)
+for I in range(3):
+  if VE > INI[I]:
+    INI.insert(I, 0)
     break
+  elif VE <INI[I]
