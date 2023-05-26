@@ -1,52 +1,50 @@
-from main import inimigo1
-from main import inimigo2
-from main import inimigo3
+import main
 SA = 0
 SM = 0
 
-#personagem
+# personagem
 
-##status
+## status
 
-###level
+### level
 LV = 1
 
-###constituição
+### constituição
 CO = 0
 
-###velocidade
+### velocidade
 VE = 0
 
-###força
+### força
 FO = 0
 
-###intelecto
+### intelecto
 IN = 0
 
-###vida
+### vida
 HP = LV * CO + 20
 
-###mana points
+### mana points
 MP = LV * IN + 10
 
-##danos
+## danos
 
-###dano arma pesada (SA = statos da arma)
+### dano arma pesada (SA = statos da arma)
 DAP = FO + SA
 
-###dano da arma leve (SA = statos da arma)
+### dano da arma leve (SA = statos da arma)
 DAL = VE + SA
 
-###dano de magia (SA = statos da arma; SM statos da magia)
+### dano de magia (SA = status da arma; SM statos da magia)
 DAM = IN + SA + SM
 
-#inimigos
+# Inimigos básicos:
 
-##lobo
-if inimigo1 == "lobo":
+## Lobo(Normal)
+if main.inimigo1 == "lobo":
   HP1 = 10
   DA1 = 2
-if inimigo2 == "lobo":
+if main.inimigo2 == "lobo":
   HP2 = 10
   DA2 = 2
 if inimigo3 == "lobo":

@@ -15,5 +15,5 @@ if I == "sim" or "Sim":
   inimigo1 = "lobo"
   inimigo2 = "lobo"
   inimigo3 = "nada"
-
+  print(anotações.HP)
 exit()
