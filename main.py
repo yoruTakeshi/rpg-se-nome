@@ -1,15 +1,18 @@
 import time
 import anotações
+import codesys
 
 if input("deseja jogar?\n") == "sim" or "Sim":
-	print ('\033c', end='')
-  aInit = input("escolha uma arma entre adaga, machado ou cajado\n")
-  while aInit != "adaga" and aInit != "machado" and aInit!= "cajado":
-    print ('\033c', end='')
-    print("por favor certifique se de escrever certo e sem letra maiscúla\n")
+	codesys.linebreak
+	aInit = input("escolha uma arma entre adaga, machado ou cajado\n")
+	
+while aInit != "adaga" and aInit != "machado" and aInit!= "cajado":
+    codesys.linebreak
+    print("Por favor, digite os comandos corretamente e sem letra maiscúla\n")
     time.sleep(2)
-    aInit = input("escolha uma arma entre adaga, machado ou cajado\n")
-  print ('\033c', end='')
+    aInit = input("Você pode escolher uma arma. Escolha entre uma adaga, machado ou um cajado.\n")
+
+  	codesys.linebreak
   print("Você acorda em uma floresta com uma dor de cabeça terrível, mas você não tem tempo para se questionar, pois dois lobos surgem")
   inimigo1 = "lobo totorial"
   inimigo2 = "lobo totorial"
