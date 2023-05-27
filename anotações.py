@@ -38,46 +38,29 @@ DAL = VE + SA
 ### dano de magia (SA = status da arma; SM statos da magia)
 DAM = IN + SA + SM
 
-# inimigos básicos:
 
-## Lobo(Totorial)
-
-if main.inimigo1 == "lobo totorial":
-  HP1 = 10
-  DA1 = 2
-  VE1 = -1
-if main.inimigo2 == "lobo totorial":
-  HP2 = 10
-  DA2 = 2
-  VE2 = -1
-if main.inimigo3 == "lobo totorial":
-  HP3 = 10
-  DA3 = 2
-  VE3 = -1
 
 #iniciativa
 
 INI = []
 
-# VE1 = 1 VE2 = 2 VE3 = 3
-
-if VE2 > VE1 and VE2 < VE3:
+if VEM[1] > VEM[0] and VEM[1] < VEM[2]:
   INI.append(3)
   INI.append(2)
   INI.append(1)
-elif VE1 > VE3 and VE1 < VE2:
+elif VEM[0] > VEM[2] and VEM[0] < VEM[1]:
   INI.append(3)
   INI.append(1)
   INI.append(2)
-elif VE3 > VE1 and VE3 < VE2:
+elif VEM[2] > VEM[0] and VEM[2] < VEM[1]:
   INI.append(1)
   INI.append(3)
   INI.append(2)
-elif VE2 > VE3 and VE2 < VE1:
+elif VEM[1] > VEM[2] and VEM[1] < VEM[0]:
   INI.append(1)
   INI.append(2)
   INI.append(3)
-elif VE1 > VE3 and VE1 < VE2:
+elif VEM[0] > VEM[2] and VEM[0] < VEM[1]:
   INI.append(2)
   INI.append(1)
   INI.append(3)
@@ -85,8 +68,11 @@ else:
   INI.append(2)
   INI.append(3)
   INI.append(1)
-for I in range(3):
-  if VE > INI[I]:
-    INI.insert(I, 0)
-    break
-  elif VE <INI[I]
+  
+for i in range(3):
+  if VE >= VEM[i]:
+    INI.insert(i, 0)
+    break  
+if VE < VEM[2]:
+  INI.insert(3, 0)
+print(INI)
