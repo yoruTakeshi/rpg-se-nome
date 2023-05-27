@@ -1,25 +1,6 @@
 import time
 import anotações
 
-#--------------- inimigos: ----------------
-
-VEM = []
-
-## Lobo (Tutorial)
-
-if inimigo1 == "Lobo Tutorial":
-  HP1 = 10
-  DA1 = 2
-  VEM.append(-1)
-if inimigo2 == "Lobo Tutorial":
-  HP2 = 10
-  DA2 = 2
-  VEM.append(-1)
-if inimigo3 == "Lobo Tutorial":
-  HP3 = 10
-  DA3 = 2
-  VEM.append(-1)
-
 #-------------------------------------------
 
 if input("Deseja jogar?\n") == "sim" or "Sim":
@@ -44,7 +25,7 @@ if input("Deseja jogar?\n") == "sim" or "Sim":
 	inimigo1 = "Lobo Tutorial"
 	inimigo2 = "Lobo Tutorial"
 	inimigo3 = "Nada"
-	while HP1 > 0 and HP2 > 0 and HP3 > 0:
+	while inimigo1 != "Nada" and inimigo2 != "Nada" and inimigo3 != "Nada":
 		print(
 		 "deixei isso aq só pro programa rodar, pq se deixar vazio o programa nn roda"
     )

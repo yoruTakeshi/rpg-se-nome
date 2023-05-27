@@ -1,78 +1,78 @@
-import main
-SA = 0
-SM = 0
+# CLASSE PARA CONSTRUIR O PERSONAGEM #
 
-# personagem
+class Personagem:
+  def __init__(self, lv, co, ve, fo, int):
+    self.lv = lv
+    self.co = co
+    self.ve = ve
+    self.fo = fo
+    self.int = int
+    self.hp = lv * co + 20
+    self.mp = lv * int + 10
 
-## status:
+# CLASSE PARA CONSTRUIR OS MONSTROS #
 
-### level
-LV = 1
-
-### constituição
-CO = 0
-
-### velocidade
-VE = 0
-
-### força
-FO = 0
-
-### intelecto
-IN = 0
-
-### vida
-HP = LV * CO + 20
-
-### mana
-MP = LV * IN + 10
-
-## danos
-
-### dano arma pesada (SA = statos da arma)
-DAP = FO + SA
-
-### dano da arma leve (SA = statos da arma)
-DAL = VE + SA
-
-### dano de magia (SA = status da arma; SM statos da magia)
-DAM = IN + SA + SM
-
-
-
-#iniciativa
-
-INI = []
-
-if VEM[1] > VEM[0] and VEM[1] < VEM[2]:
-  INI.append(3)
-  INI.append(2)
-  INI.append(1)
-elif VEM[0] > VEM[2] and VEM[0] < VEM[1]:
-  INI.append(3)
-  INI.append(1)
-  INI.append(2)
-elif VEM[2] > VEM[0] and VEM[2] < VEM[1]:
-  INI.append(1)
-  INI.append(3)
-  INI.append(2)
-elif VEM[1] > VEM[2] and VEM[1] < VEM[0]:
-  INI.append(1)
-  INI.append(2)
-  INI.append(3)
-elif VEM[0] > VEM[2] and VEM[0] < VEM[1]:
-  INI.append(2)
-  INI.append(1)
-  INI.append(3)
-else:
-  INI.append(2)
-  INI.append(3)
-  INI.append(1)
+class Monstro:
+  def __init__(self, nome, hp, da, ve):
+    self.nome = nome
+    self.hp = hp
+    self.da = da
+    self.ve = ve
   
-for i in range(3):
-  if VE >= VEM[i]:
-    INI.insert(i, 0)
-    break  
-if VE < VEM[2]:
-  INI.insert(3, 0)
-print(INI)
+# FUNÇÃO PARA DETERMINAR A INICIATIVA OBS.: QUASE TERMINADA
+
+def iniciativa(ve, nm):
+  ini = []
+  aux = 0
+  size = len(ve)
+  for i in range(size):
+    for c in range(size-1, 0+i, -1):
+      if(ve[i] > ve[c]):
+        aux = ve[i]
+        ve[i] = ve[c]
+        ve[c] = aux
+    ini.append(ve[i])
+  return ini
+
+## PERSONAGEM ##
+
+# CRIAÇÃO DO PERSONAGEM
+boneco = Personagem(1, 0, 0, 0, 0)
+
+## MONSTROS ##
+
+# CRIAÇÃO DOS MONSTROS
+#nomeVariavel = Monstro('nome', hp, da, ve)
+lobo = Monstro('Lobo', 10, 2, -1) 
+
+
+looping = "infinito"
+while looping == "infinito":
+  SA = 0
+  SM = 0
+	## danos
+
+	### dano arma pesada (SA = statos da arma)
+	DAP = FO + SA
+
+	### dano da arma leve (SA = statos da arma)
+	DAL = VE + SA
+
+	### dano de magia (SA = status da arma; SM statos da magia)
+	DAM = IN + SA + SM
+
+	#--------------- inimigos: ----------------
+
+	VEM = []
+
+	## Lobo (Tutorial)
+
+	#iniciativa
+
+  
+  if HP1 <= 0:
+    inimigo1 = "Nada"
+  if HP2 <= 0:
+    inimigo2 = "Nada"
+  if HP3 <= 0:
+    inimigo3 = "Nada"
