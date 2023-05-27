@@ -27,6 +27,6 @@ if input("Deseja jogar?\n") == "sim" or "Sim":
 	inimigo3 = "Nada"
 	while inimigo1 != "Nada" and inimigo2 != "Nada" and inimigo3 != "Nada":
 		print(
-		 "deixei isso aq só pro programa rodar, pq se deixar vazio o programa nn roda"
+		 "--------"
     )
 exit()
