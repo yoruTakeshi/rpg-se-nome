@@ -24,4 +24,4 @@
 # Mecânicas Principais:
 1. Combate: Básico
 2. Mapa
-3. Save
+3. Save (Não agora)

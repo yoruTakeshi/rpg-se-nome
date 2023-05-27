@@ -50,15 +50,15 @@ looping = "infinito"
 while looping == "infinito":
   SA = 0
   SM = 0
-	## danos
+	## Tipos de Dano
 
-	### dano arma pesada (SA = statos da arma)
+	### Dano de arma pesada (SA = status da arma)
 	DAP = FO + SA
 
-	### dano da arma leve (SA = statos da arma)
+	### Dano da arma leve (SA = status da arma)
 	DAL = VE + SA
 
-	### dano de magia (SA = status da arma; SM statos da magia)
+	### Dano de magia (SA = status da arma; SM status da magia)
 	DAM = IN + SA + SM
 
 	#--------------- inimigos: ----------------
@@ -67,7 +67,7 @@ while looping == "infinito":
 
 	## Lobo (Tutorial)
 
-	#iniciativa
+	#Iniciativa
 
   
   if HP1 <= 0:
