@@ -10,7 +10,7 @@ Para rodar o programa, recomendo pelo menos um dispositivo que tenha suporte a P
 -------------------------------------------------------------------------
 
 # EN:
-# Hello there (General Kenobi!). If you're reading this, it's probably because you don't have anything better to do. This is just an regular readme.
+# Hello there (General Kenobi!). If someone is reading this, it's probably because you don't have anything better to do. This is just an regular readme.
 
 ## Programming:
 ### Made by "amigos da programação", a team formed by some friends (and i, making this readme for you.)
