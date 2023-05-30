@@ -2,7 +2,17 @@ import time
 import anotações
 
 def menuFight():
-  print("1 - ")
+  while(1):
+    print("\033c", end='')
+    print("-------------")
+    print("1 - ATACAR")
+    print("2 - USAR ITEM")
+    print("3 - CORRER")
+    print("-------------")
+    choice = int(input("__"))
+    if not(choice != 1 or choice != 2 or choice != 3): return choice
+    else:
+      print("ERRO: Valor de entrada ínvalido!")
 
 def fight(lutadores, ini):
   for i in range(len(ini)):
