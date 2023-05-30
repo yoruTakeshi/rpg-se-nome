@@ -11,11 +11,11 @@ def menuFight():
     print("-------------")
     choice = int(input("__"))
     if not(choice != 1 or choice != 2 or choice != 3): return choice
-    else:
-      print("ERRO: Valor de entrada ínvalido!")
-
+    else: print("ERRO: Valor de entrada ínvalido!\nDigite novamente...")
+      
 def fight(lutadores, ini):
-  for i in range(len(ini)):
+  size = len(ini)
+  for i in range(size):
     if(ini[i] == 0):
       p = i
       break
@@ -24,7 +24,13 @@ def fight(lutadores, ini):
     if(ini[round] != p):
       continue
     else:
-      
+      choice = menuFight()
+      if choice == 1:
+        print("Alvo:")
+        alvo = 0
+        while(alvo < 1 and alvo >= size):
+          for i in range(1, size): print(f"{i} - {lutadores[i].nome}")
+          alvo = int(input("__"))
     round += 1
 
 if input("Deseja jogar?\n") == "sim":
