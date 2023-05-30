@@ -1,15 +1,20 @@
 # CLASSE PARA CONSTRUIR O PERSONAGEM #
 
 class Personagem:
-  def __init__(self, lv, co, ve, fo, int):
+  def __init__(self, lv, co, ve, fo, mind):
+    self.nome = ''
+    self.arma = ''
     self.lv = lv
     self.co = co
     self.ve = ve
     self.fo = fo
-    self.int = int
-    self.hp = lv * co + 20
-    self.mp = lv * int + 10
+    self.mind = mind
+    self.hp = lv + int(co * 2) + 20
+    self.mp = lv + int(mind * 1.5) + 10
 
+  def ataque(self):
+    print(f"{self.nome} causou {1} de DANO!")
+    return 1
 # CLASSE PARA CONSTRUIR OS MONSTROS #
 
 class Monstro:
@@ -18,61 +23,38 @@ class Monstro:
     self.hp = hp
     self.da = da
     self.ve = ve
-  
-# FUNÇÃO PARA DETERMINAR A INICIATIVA OBS.: QUASE TERMINADA
 
-def iniciativa(ve, nm):
+  def ataque(self):
+    print(f"{self.nome} causou {self.da} de DANO!")
+    return self.da
+
+# FUNÇÃO PARA DETERMINAR A INICIATIVA
+
+def iniciativa(ve):
   ini = []
-  aux = 0
-  size = len(ve)
-  for i in range(size):
-    for c in range(size-1, 0+i, -1):
-      if(ve[i] > ve[c]):
-        aux = ve[i]
-        ve[i] = ve[c]
-        ve[c] = aux
-    ini.append(ve[i])
+  vea = []
+  for i in ve: vea.append(i)
+  sort(ve)
+  for i in ve:
+    for c in range(len(vea)):
+      if vea[c] == i:
+          vea[c] = -99
+          ini.append(c)
+          break
   return ini
 
-## PERSONAGEM ##
+# FUNÇÃO PARA ORDENAR
 
-# CRIAÇÃO DO PERSONAGEM
-boneco = Personagem(1, 0, 0, 0, 0)
+def sort(n):
+  aux = 0
+  size = len(n)
+  for i in range(size):
+    for c in range(size-1, i, -1):
+      if(n[i] < n[c]):
+        aux = n[i]
+        n[i] = n[c]
+        n[c] = aux
+  return n
 
-## MONSTROS ##
-
-# CRIAÇÃO DOS MONSTROS
-#nomeVariavel = Monstro('nome', hp, da, ve)
-lobo = Monstro('Lobo', 10, 2, -1) 
-
-
-looping = "infinito"
-while looping == "infinito":
-  SA = 0
-  SM = 0
-	## Tipos de Dano
-
-	### Dano de arma pesada (SA = status da arma)
-	DAP = FO + SA
-
-	### Dano da arma leve (SA = status da arma)
-	DAL = VE + SA
-
-	### Dano de magia (SA = status da arma; SM status da magia)
-	DAM = IN + SA + SM
-
-	#--------------- inimigos: ----------------
-
-	VEM = []
-
-	## Lobo (Tutorial)
-
-	#Iniciativa
-
-  
-  if HP1 <= 0:
-    inimigo1 = "Nada"
-  if HP2 <= 0:
-    inimigo2 = "Nada"
-  if HP3 <= 0:
-    inimigo3 = "Nada"
+lobo = Monstro('Lobo', 10, 2, -1)
+goblin = Monstro('Goblin', 15, 6, 4)

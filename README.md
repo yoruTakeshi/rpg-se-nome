@@ -1,6 +1,8 @@
 # PT-BR:
 # Oi. Se alguém estiver lendo, é porque não tem nada da vida para fazer. Isso aqui é apenas um readme.
 
+### B- Readme?
+
 ## Programming:
 ### Feito pelos amigos da programação, composto por alguns amigos (e eu, que estou escrevendo este readme para você.)
 ### Escrito em Python 3.X, e anotações em Markdown.
