@@ -1,3 +1,6 @@
+from abc import ABC, abstractmethod
+from random import randint
+
 # CLASSE PARA CONSTRUIR O PERSONAGEM #
 
 class Personagem:
@@ -15,19 +18,34 @@ class Personagem:
   def ataque(self):
     print(f"{self.nome} causou {1} de DANO!")
     return 1
-# CLASSE PARA CONSTRUIR OS MONSTROS #
+# CLASSE ABSTRATA PARA OS MONSTROS #
 
-class Monstro:
-  def __init__(self, nome, hp, da, ve):
+class Monstro(ABC):
+  def __init__(self, nome, hp, da, ve, skill):
     self.nome = nome
     self.hp = hp
     self.da = da
     self.ve = ve
+    self.skill = skill
+  @abstractmethod
+  def emitir_som(self):
+    pass
+# CLASSE DO LOBO
 
-  def ataque(self):
-    print(f"{self.nome} causou {self.da} de DANO!")
-    return self.da
-
+class Wolf(Monstro):
+  def emitir_som(self):
+    self.number = randint(1, 3)
+    if self.number == 1: print(f"{self.nome}: AUUUU!!!!")
+    elif self.number == 2: print(f"{self.nome}: Au! Au!")
+    else: print(f"{self.nome}: AUUUUUAUUUUUUU!!!")
+  def atq1(self):
+    self.dano = self.da + self.ve
+    print(f"{self.nome} usou 'Arranhar', causando {self.dano} de dano!")
+    return self.dano
+  def atq2(self):
+    self.dano = self.da
+    print(f"{self.nome} usou 'Mordida', causando {self.dano} de dano!")
+    return self.dano
 # FUNÇÃO PARA DETERMINAR A INICIATIVA
 
 def iniciativa(ve):
@@ -56,5 +74,5 @@ def sort(n):
         n[c] = aux
   return n
 
-lobo = Monstro('Lobo', 10, 2, -1)
-goblin = Monstro('Goblin', 15, 6, 4)
+# lobo = Monstro('Lobo', 10, 2, -1)
+# goblin = Monstro('Goblin', 15, 6, 4)
